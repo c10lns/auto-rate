@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>配置</title>
+    <style>
+      html {
+        height: 0;
+      }
+      body {
+        height: 444px;
+        padding: 15px 20px;
+        text-align: center;
+      }
+      button {
+        width: 100%;
+        margin-top: 10px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        line-height: 2;
+      }
+      button.red {
+        background-color: red;
+        color: #fff;
+      }
+      button.green {
+        background-color: green;
+      }
+      p {
+        font-size: 12px;
+        color: #333;
+        line-height: 1.5;
+      }
+      label {
+        color: #333;
+      }
+      .title {
+        line-height: 1.5;
+        margin-top: 20px;
+        font-size: 30px;
+        color: #333;
+      }
+      .error {
+        color: red;
+      }
+      .clear {
+        clear: both;
+      }
+      .cycleCount {
+        width: 50px;
+        /* float: left; */
+      }
+      .detailContent {
+        text-align: left;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
+      }
+      textarea {
+        vertical-align: top;
+      }
+      input {
+        margin: 5px 0;
+      }
+    </style>
+</head>
+
+<body>
+    <p class="title">喵~</p>
+    <p id="stat"></p>
+    <p class="error" id="error"></p>
+    <div class="detailContent">
+      <label for="comments">随机评论 (共<span id="commentsCount">--</span>条)：</label>
+      <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      <br>
+      <label for="cycleCount">次数：</label>
+      <input class="cycleCount" id="cycleCount" type="number">
+      <br>
+      <label for="doComment">评论：</label>
+      <input id="doComment" type="checkbox">
+      <br>
+      <label for="doLike">点赞：</label>
+      <input id="doLike" type="checkbox">
+      <div>
+      </div>
+    </div>
+
+    <button id="action" class="">开始</button>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/popup.js"></script>
+
+</html>

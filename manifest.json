@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "我要做网红",
+  "version": "0.1.0",
+  "description": "自动点赞评论，开启通往网红之路！",
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-48.png"
+  },
+  "background": {
+
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "img/icon-48.png",
+    "default_title": "我要做网红",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "options_page": "options.html",
+  "options_ui":
+  {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
